@@ -99,12 +99,64 @@
 // }
 // someFunction("hi","there","how are you");
 
-function addTwoNumbers(a,b){
-    return a+b;
+// function addTwoNumbers(a,b){
+//     return a+b;
+// }
+// let resultArr=[4,5];
+// for(let i=0; i<10; i++){
+//     let result=addTwoNumbers(i,2*i);
+//     resultArr.push(result);
+// }
+// console.log(resultArr)
+
+// RETURNING WITH ARROW FUNCTION---->
+// let addTwoNumbers=(x,y)=>x+y;
+// console.log(addTwoNumbers(3, 5));
+
+// VARIABLE SCOPE IN FUNCTION------>
+// function testAvailability(x){
+//     console.log("Availability here",x)
+// }
+// testAvailability("Hi");
+// console.log("Not Available here",x);
+
+// function testAvailability(){
+//     let y="Local Variable";
+//     console.log("Availability here",y);
+// }
+// testAvailability();
+// console.log("Not Available here",y)
+
+// function doingStuff(){
+//     if(true){
+//         var x="local";
+//     }
+//     console.log(x);
+// }
+// doingStuff()
+
+// function doingStuff(){
+//     if(true){
+//         console.log(x);
+//         var x="local";
+//     }
+    
+// }
+// doingStuff()
+
+// function doingStuff(){
+//     if(true){
+//         console.log(x);
+//         let x="local";
+//     }
+    
+// }
+// doingStuff()
+
+let x="global";
+function doingStuff(){
+    let x="local";
+    console.log(x);
 }
-let resultArr=[4,5];
-for(let i=0; i<10; i++){
-    let result=addTwoNumbers(i,2*i);
-    resultArr.push(result);
-}
-console.log(resultArr)
+doingStuff();
+console.log(x);
